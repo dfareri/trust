@@ -149,12 +149,9 @@ else:
 '''
 
 #read in stimuli
-trial_data_1 = [r for r in csv.DictReader(open('params/TG_designs/sub-' + subj_id + '/sub-'
-    + subj_id + '_run-01_design.csv','rU'))]
-trial_data_2  = [r for r in csv.DictReader(open('params/TG_designs/sub-' + subj_id + '/sub-'
-    + subj_id + '_run-02_design.csv','rU'))]
-trial_data_3  = [r for r in csv.DictReader(open('params/TG_designs/sub-' + subj_id + '/sub-'
-    + subj_id + '_run-03_design.csv','rU'))]
+trial_data_1 = [r for r in csv.DictReader(open('params/TG_designs/run-01_design.csv','rU'))]
+trial_data_2 = [r for r in csv.DictReader(open('params/TG_designs/run-02_design.csv','rU'))]
+trial_data_3 = [r for r in csv.DictReader(open('params/TG_designs/run-03_design.csv','rU'))]
 #trial_data_4  = [r for r in csv.DictReader(open('params/TG_designs/sub-' + subj_id + '/sub-'
 #    + subj_id + '_run-04_design.csv','rU'))]
 #trial_data_5  = [r for r in csv.DictReader(open('params/TG_designs/sub-' + subj_id + '/sub-'
@@ -427,10 +424,10 @@ if len (specific_run)==1:
         do_run(1, trials_run2)
     elif run == 3:
         do_run(2, trials_run3)
-    elif run == 4:
-        do_run(3, trials_run4)
-    elif run == 5:
-        do_run(4, trials_run5)
+    #elif run == 4:
+    #    do_run(3, trials_run4)
+    #elif run == 5:
+    #    do_run(4, trials_run5)
     #elif run == 6:
     #    do_run(5, trials_run6)
     else: 'Run index is not permissible.'
