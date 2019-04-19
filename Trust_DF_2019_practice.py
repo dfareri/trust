@@ -49,10 +49,12 @@ else:
 
     if gui.OK:
         subj_id=subjDlg.data[0]
-        subj_age=subjDlg.data[1]
-        subj_sex=subjDlg.data[2]
-        specific_run=subjDlg.data[3]
-        screen=subjDlg.data[4]
+        #subj_age=subjDlg.data[1]
+        #subj_sex=subjDlg.data[2]
+        #specific_run=subjDlg.data[3]
+        screen=subjDlg.data[1]
+    else:
+        sys.exit()
 '''
         if (not subj_id == False):
             if (not specific_run):
@@ -66,8 +68,6 @@ else:
             print 'Please enter subject ID. Consult the particiant folder for the correct ID'
             sys.exit()
 '''
-    else:
-        sys.exit()
 
 run_data = {
     'Participant ID': subj_id,
