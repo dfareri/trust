@@ -88,7 +88,7 @@ win = visual.Window([800,600], monitor="testMonitor", units="deg", fullscr=useFu
 
 #define stimulus
 fixation = visual.TextStim(win, text="+", height=2)
-ready_screen = visual.TextStim(win, text="Please wait for this round of the game to begin. \n\nRemember to keep your head still!", height=1.5)
+ready_screen = visual.TextStim(win, text="Please press the equal sign to begin the practice round!", height=1.5)
 waiting = visual.TextStim(win, text="Waiting...", height=1.5)
 
 #decision screen
@@ -102,16 +102,16 @@ outcome_stim = visual.TextStim(win, text='')
 
 outcome_map = {
     1: 'You have chosen to keep the money',
-    2: {0:'{} has chosen to share $0', 1:'{} has chosen to share money'},
+    2: {0:'{} has chosen to share $0', 1:'{} has chosen to share $1.50'},
     999: 'You have three seconds to choose'
     }
 
 # instruction screen #
-instruct_screen = visual.TextStim(win, text='Welcome to the Investment Game!\nYou have been assigned the role of investor.\n\nIn this game you will interacting with a few different partners: your friend, the person you met today, and the computer.\n\nOn every trial, you will begin with $1.00.\n\n You can choose to send all of that money to your partner on a given trial by selecting one of the options on the screen. Or, you can choose to keep that money for yourself.', pos = (0,1), wrapWidth=20, height = 1.2)
-instruct_screen2 = visual.TextStim(win, text='Press Button 2(index finger) to send the amount on the lower left of the screen. Press Button 3(middle finger) to send the amount on the lower right of the screen.\n\n Remember, whatever you send means your partner receives 3 times that amount; your partner will be notified of your decision.\n\n If you sent money s/he will choose to share it back evenly with you or keep it all for him/herself.', pos = (0,1), wrapWidth=20, height = 1.2)
+instruct_screen = visual.TextStim(win, text='Welcome to the Investment Game!\nYou have been assigned the role of investor.\n\nIn this game you will interacting with the three partners with whom you played Cyberball.\n\nOn every trial, you will begin with $1.00.\n\n You can choose to share that money with your partner, meaning that he will receive 3 times that amount ($3.00) or you can choose to keep the $1.00 for yourself.', pos = (0,1), wrapWidth=20, height = 1.2)
+instruct_screen2 = visual.TextStim(win, text='Press the number 2 to send the amount on the lower left of the screen. Press the number 3 to send the amount on the lower right of the screen.\n\nYour partner will be notified of your decision.\n\n If you sent money he can choose to share it back evenly with you or keep all $3.00 for him/herself.', pos = (0,1), wrapWidth=20, height = 1.2)
 
 #exit
-exit_screen = visual.TextStim(win, text='Thanks for playing! Please wait for instructions from the researcher.', pos = (0,1), wrapWidth=20, height = 1.2)
+exit_screen = visual.TextStim(win, text='Please wait for instructions from the experimenter.', pos = (0,1), wrapWidth=20, height = 1.2)
 
 #logging
 expdir = os.getcwd()
@@ -121,7 +121,7 @@ if not os.path.exists(subjdir):
 log_file = os.path.join(subjdir,'sub-{}_task-trust_practice_raw.csv')
 
 # double check that friend and stranger photos are created
-imgdir = '%s/Images/pos.png' % (expdir)
+imgdir = '%s/Images/Mike.png' % (expdir)
 if not os.path.isfile(imgdir):
     print 'Please create participant images and folders (see protocol).'
     sys.exit()

@@ -54,7 +54,7 @@ win = visual.Window([800,600], monitor="testMonitor", units="deg", fullscr=useFu
 print "got to check 1"
 
 #first screen
-instruct_screen = visual.TextStim(win, text='Please use the numbers at the top of the keyboard to answer the following questions about your partners', pos = (0,0), units='norm', height = 0.1)
+instruct_screen = visual.TextStim(win, text='Please use the numbers at the top of the keyboard to answer the following questions about your partners.\n\nPress the number 1 to move the slider to the left.\n\nPress the number 3 to move the slider to the right.\n\nPress the number 2 to enter your response.', pos = (0,0), units='norm', height = 0.1)
 
 #image
 pictureStim =  visual.ImageStim(win, pos=(0,5.5),size=(6.65,6.65))
